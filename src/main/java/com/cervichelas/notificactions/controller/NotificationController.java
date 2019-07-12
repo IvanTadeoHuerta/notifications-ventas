@@ -35,18 +35,17 @@ public class NotificationController {
 		JSONObject body = new JSONObject();
 		body.put("to", "/topics/" + notificationDTO.getTopic());
 		body.put("priority", "high");
+		
 
 		JSONObject notification = new JSONObject();
 		notification.put("title", notificationDTO.getTitle());
 		notification.put("body", notificationDTO.getBody());
-		notification.put("url_imagen", notificationDTO.getUrl_imagen());
 
-//	        JSONObject data = new JSONObject();
-//	        data.put("Key-1", "JSA Data 1");
-//	        data.put("Key-2", "JSA Data 2");
+	    JSONObject data = new JSONObject();
+	    data.put("image", notificationDTO.getImage());
 
 		body.put("notification", notification);
-//	        body.put("data", data);
+	    body.put("data", data);
 
 		HttpEntity<String> request = new HttpEntity<>(body.toString());
 
