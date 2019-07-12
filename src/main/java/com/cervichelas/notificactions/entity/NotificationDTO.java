@@ -11,11 +11,12 @@ public class NotificationDTO {
 	    public NotificationDTO() {
 	    }
 
-	    public NotificationDTO(long id, String title, String body, String topic) {
+	    public NotificationDTO(long id, String title, String body, String topic, String url_imagen) {
 	        this.setId(id);
 	        this.setTitle(title);
 	        this.setBody(body);
 	        this.setTopic(topic);
+	        this.setUrl_imagen(url_imagen);
 	    }
 
 	    @Override
@@ -24,6 +25,7 @@ public class NotificationDTO {
 	                "id=" + getId() +
 	                ", title='" + getTitle() + '\'' +
 	                ", body='" + getBody() + '\'' +
+	                ", url_imagen='" + getUrl_imagen() + '\'' +
 	                ", topic='" + getTopic() + '\'' +
 	                '}';
 	    }
